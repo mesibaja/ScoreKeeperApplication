@@ -7,9 +7,9 @@
         android:id="@+id/activity_main_pingpong"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="@string/pingpong"
         android:scaleType="centerCrop"
-        android:src="@drawable/pingpong"
-        android:contentDescription="@string/pingpong"/>
+        android:src="@drawable/pingpong" />
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -26,18 +26,18 @@
 
             <EditText
                 android:id="@+id/player_a_name"
+                style="@style/Text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Text"
                 android:hint="@string/player_a"
                 android:inputType="textCapWords" />
 
             <TextView
                 android:id="@+id/player_a_score"
+                style="@style/Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/zero"
-                style="@style/Number"/>
+                android:text="@string/zero" />
 
             <Button
                 android:layout_width="match_parent"
@@ -53,9 +53,9 @@
         <View
             android:layout_width="1dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="66dp"
             android:layout_marginBottom="56dp"
-            android:background="@android:color/darker_gray"/>
+            android:layout_marginTop="66dp"
+            android:background="@android:color/darker_gray" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -66,18 +66,18 @@
 
             <EditText
                 android:id="@+id/player_b_name"
+                style="@style/Text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Text"
                 android:hint="@string/player_b"
                 android:inputType="textCapWords" />
 
             <TextView
                 android:id="@+id/player_b_score"
+                style="@style/Number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/zero"
-                style="@style/Number"/>
+                android:text="@string/zero" />
 
             <Button
                 android:layout_width="match_parent"
