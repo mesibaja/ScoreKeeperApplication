@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score Keeper Application</string>
+    <string name="pingpong">pingpong</string>
+    <string name="player_a">Player A</string>
+    <string name="player_b">Player B</string>
+    <string name="point">Point</string>
+    <string name="foul">Foul</string>
+    <string name="zero">0</string>
+    <string name="reset">Reset</string>
+</resources>
