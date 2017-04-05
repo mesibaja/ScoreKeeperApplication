@@ -32,14 +32,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the score for Player A by 1 point.
-     */
-
-    public void addOneFoulForPlayerA(View v) {
-        PlayerA = PlayerA + 1;
-        displayForPlayerA(PlayerA);
-    }
-    /**
      * Increase the score for Player B by 1 point.
      */
     public void addOneForPlayerB(View v) {
@@ -48,15 +40,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
         PlayerB = PlayerB + 1;
         displayForPlayerB (PlayerB);}
-    }
-
-    /**
-     * Increase the score for Player B by 1 point.
-     */
-
-    public void addOneFoulForPlayerB(View v) {
-        PlayerB = PlayerB + 1;
-        displayForPlayerB(PlayerB);
     }
     /**
      * Resets the score for both players back to 0.
@@ -76,18 +59,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Displays the given Foul score for Player A.
+     * Displays the given score for Player B.
      */
-    public void displayOneFoulForPlayerA(int score) {
+    public void displayForPlayerB(int score) {
         TextView scoreView = (TextView) findViewById(R.id.player_a_score);
-        scoreView.setText(String.valueOf(score));
-    }
-
-    /**
-     * Displays the given Foul score for Player B.
-     */
-    public void displayOneFoulForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.player_b_score);
         scoreView.setText(String.valueOf(score));
     }
 }
