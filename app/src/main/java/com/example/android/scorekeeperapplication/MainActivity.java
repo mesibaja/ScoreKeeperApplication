@@ -3,6 +3,7 @@ package com.example.android.scorekeeperapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,10 +22,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increase the score for Player A by 1 point but no more than 11.
      */
+-
 
     public void addOneForPlayerA(View v) {
-        if (PlayerA + 1 > 10) {
-            Toast.makeText(this, "Player A won!", Toast.LENGTH_LONG).show();
+        if (PlayerA + 1 > 11) {
+            EditText playerNameEditText = (EditText) findViewById(R.id.player_a_name);
+            String winnerName = playerNameEditText.getText().toString();
+            Toast.makeText(this, "winnerName + \" won.\", Toast.LENGTH_LONG).show();
         } else {
             PlayerA = PlayerA + 1;
         }
@@ -32,24 +36,29 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Increase the score for Player B by 1 point.
+     * Increase the score for Player B by 1 point but no more than 11.
      */
     public void addOneForPlayerB(View v) {
-        if (PlayerB + 1 > 10) {
-            Toast.makeText(this, "Player B won!", Toast.LENGTH_LONG).show();
+        if (PlayerB + 1 > 11) {
+            EditText playerNameEditText = (EditText) findViewById(R.id.player_b_name);
+            String winnerName = playerNameEditText.getText().toString();
+            Toast.makeText(this, "winnerName + \" won.\", Toast.LENGTH_LONG).show();
         } else {
-        PlayerB = PlayerB + 1;
-        displayForPlayerB (PlayerB);}
+            PlayerB = PlayerB + 1;
+            displayForPlayerB(PlayerB);
+        }
     }
+
     /**
      * Resets the score for both players back to 0.
      */
-    public void resetScore(View v){
+    public void resetScore(View v) {
         PlayerA = 0;
         PlayerB = 0;
         displayForPlayerA(PlayerA);
         displayForPlayerB(PlayerB);
     }
+
     /**
      * Displays the given score for Player A.
      */
@@ -62,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Player B.
      */
     public void displayForPlayerB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.player_a_score);
+        TextView scoreView = (TextView) findViewById(R.id.player_b_score);
         scoreView.setText(String.valueOf(score));
     }
 }
