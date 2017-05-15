@@ -19,16 +19,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     * Increase the score for Player A by 1 point but no more than 11.
-     */
--
+    //*** Increase the score for Player A by 1 point but no more than 1.*/
 
     public void addOneForPlayerA(View v) {
-        if (PlayerA + 1 > 11) {
+        if (PlayerA + 1 > 10) {
             EditText playerNameEditText = (EditText) findViewById(R.id.player_a_name);
             String winnerName = playerNameEditText.getText().toString();
-            Toast.makeText(this, "winnerName + \" won.\", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, winnerName + "  won.", Toast.LENGTH_LONG).show();
         } else {
             PlayerA = PlayerA + 1;
         }
@@ -39,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
      * Increase the score for Player B by 1 point but no more than 11.
      */
     public void addOneForPlayerB(View v) {
-        if (PlayerB + 1 > 11) {
+        if (PlayerB + 1 > 10) {
             EditText playerNameEditText = (EditText) findViewById(R.id.player_b_name);
             String winnerName = playerNameEditText.getText().toString();
-            Toast.makeText(this, "winnerName + \" won.\", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, winnerName + "  won.", Toast.LENGTH_LONG).show();
         } else {
             PlayerB = PlayerB + 1;
             displayForPlayerB(PlayerB);
